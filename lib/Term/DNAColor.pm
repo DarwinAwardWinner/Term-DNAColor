@@ -5,7 +5,7 @@ use utf8;
 package Term::DNAColor;
 # ABSTRACT: Add colors to DNA and RNA sequences
 
-use Exporter::Simple;
+use base 'Exporter::Simple';
 use Term::ANSIColor qw(color);
 
 sub _get_nucl_color {
