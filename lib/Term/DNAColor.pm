@@ -3,7 +3,7 @@ use warnings;
 use utf8;
 
 package Term::DNAColor;
-# ABSTRACT: Add colors to DNA and RNA sequences
+# ABSTRACT: Add colors to DNA and RNA sequences in terminal output
 
 use base 'Exporter::Simple';
 use Term::ANSIColor qw(color);
@@ -70,7 +70,7 @@ __END__
 
 =head1 DESCRIPTION
 
-This module mainly provides a function, C<colordna>, that takes a DNA
+This module provides a function, C<colordna>, that takes a DNA
 sequence and wraps unambiguous nucleotides in ANSI color codes, so
 that you can print the sequence to a terminal and have it come out
 colored.
