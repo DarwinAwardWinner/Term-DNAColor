@@ -1,6 +1,6 @@
 #!perl
 use Test::More;
-use Term::ANSIColor qw(colorstrip color);
+use Term::ANSIColor 2.01 qw(colorstrip color);
 use Term::DNAColor;
 
 my $seq = "ATGCNATGCN";

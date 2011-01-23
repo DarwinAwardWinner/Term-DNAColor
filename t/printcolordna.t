@@ -1,6 +1,5 @@
 #!perl
 use Test::More;
-
 use Term::DNAColor;
 
 my $seq = "ATGCNATGCN";
