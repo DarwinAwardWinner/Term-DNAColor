@@ -6,7 +6,7 @@ Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 =head1 VERSION
 
-version 0.110212
+version 0.110230
 
 =head1 SYNOPSIS
 

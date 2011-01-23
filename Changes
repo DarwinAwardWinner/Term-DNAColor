@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+0.110230  2011-01-23 07:55:34 PST8PDT
     - Add version requirement to Term::ANSIColor in test files
 
 0.110212  2011-01-20 21:38:27 PST8PDT
