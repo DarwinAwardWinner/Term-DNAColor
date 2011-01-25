@@ -50,7 +50,8 @@ sub colordna : Exported {
 
 =function colorrna
 
-This is simply an alias for C<colordna>. Unlike C<colordna>, it is not
+This is simply an alias for C<colordna>. Both C<colordna> and
+C<colorrna> will highlight U for uracil. Unlike C<colordna>, it is not
 exported by default, but only by request.
 
 =cut
