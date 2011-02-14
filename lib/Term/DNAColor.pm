@@ -6,7 +6,7 @@ package Term::DNAColor;
 # ABSTRACT: Add colors to DNA and RNA sequences in terminal output
 
 use base 'Exporter::Simple';
-use Term::ANSIColor qw(color);
+use Term::ANSIColor::Print;
 
 sub _get_nucl_color {
     my $nucl_colors = {
@@ -16,12 +16,26 @@ sub _get_nucl_color {
         C => 'blue',
         G => 'yellow',
     };
-    return color($nucl_colors->{$_[0]} || 'reset') . color('bold');
+    return $nucl_colors->{$_[0]} || 'normal';
 }
 
-sub _wrap_nucl_in_color {
-    return _get_nucl_color($_[0]) . $_[0] . color('reset');
+my $colorizer = Term::ANSIColor::Print->new(
+    output => 'return',
+    eol    => '',
+);
+
+sub _colorize_nucl {
+    my $nucl = $_[0];
+    my $color = "bold_" . _get_nucl_color($nucl);
+    my $colored_nucl = $colorizer->$color($nucl);
+    return $colored_nucl;
 }
+
+# Optional Memoize support
+eval {
+    require Memoize;
+    Memoize::memoize('_colorize_nucl');
+};
 
 =function colordna
 
@@ -44,7 +58,7 @@ This function is exported by default.
 
 sub colordna : Exported {
     my @seq_chars = split //, shift;
-    my @colored_seq_chars = map { _wrap_nucl_in_color($_) } @seq_chars;
+    my @colored_seq_chars = map { _colorize_nucl($_) } @seq_chars;
     return join "", @colored_seq_chars;
 }
 
