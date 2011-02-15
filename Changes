@@ -2,6 +2,11 @@ Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
 
+0.110460  2011-02-14 19:52:04 PST8PDT
+  This release does not contain any user-visible changes.
+    - Improved backend for colorization
+    - Revamped test suite
+
 0.110230  2011-01-23 07:55:34 PST8PDT
     - Add version requirement to Term::ANSIColor in test files
 
