@@ -6,7 +6,7 @@ Term::DNAColor - Add colors to DNA and RNA sequences in terminal output
 
 =head1 VERSION
 
-version 0.110230
+version 0.110460
 
 =head1 SYNOPSIS
 
@@ -56,7 +56,8 @@ This function is exported by default.
 
 =head2 colorrna
 
-This is simply an alias for C<colordna>. Unlike C<colordna>, it is not
+This is simply an alias for C<colordna>. Both C<colordna> and
+C<colorrna> will highlight U for uracil. Unlike C<colordna>, it is not
 exported by default, but only by request.
 
 =head1 BUGS AND LIMITATIONS
